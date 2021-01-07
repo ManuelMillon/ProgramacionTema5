@@ -1,33 +1,36 @@
 /**
  * 
  */
-package paquetetema5;
-
+package tema5Ejercicios;
 import java.util.Scanner;
-
 /**
- * Manuel MillÛn
+ * @author Propietario
  *
  */
 public class Tema5Ejercicio9 {
 
 	/**
-	 * Programa que diga cu·ntos dÌgitos tiene un n˙mero introducido por teclado.
+	 * Realiza un programa que nos diga cu√°ntos d√≠gitos tiene un n√∫mero introducido
+	 * por teclado. Este ejercicio es equivalente a otro realizado anteriormente, con
+	 * la salvedad de que el anterior estaba limitado a n√∫meros de 5 d√≠gitos como
+	 * m√°ximo. En esta ocasi√≥n, hay que realizar el ejercicio utilizando bucles; de
+	 * esta manera, la √∫nica limitaci√≥n en el n√∫mero de d√≠gitos la establece el tipo de
+	 * dato que se utilice (int o long).
 	 */
 	public static void main(String[] args) {
+		Scanner kboard = new Scanner(System.in);
+		System.out.print("Introduce un n√∫mero para saber su cantidad de d√≠gitos: ");
+		int i = kboard.nextInt();
+		int numeroDeDigitos=1;
+		int numeroIntroducido;
+		numeroIntroducido = i;
 
-		Scanner teclado = new Scanner(System.in);
-		System.out.print("Introduce el n˙mero para calcular sus dÌgitos: ");
-		int numero = teclado.nextInt();
-		int numeroDeDigitos = 1;
-
-		
-		while (numero => 10) { // Mientras se cumple la condiciÛn
-			numero /= 10;     // de la operaciÛn, numeroDeDigitos crece 1 desde 1.
-			numeroDeDigitos++;
+		while (i > 0) {
+			System.out.println(i);
+			i /= 10;
+		numeroDeDigitos++;
 		}
-		int numero0 = numero;
-		System.out.println(numero0 + " tiene " + numeroDeDigitos + " dÌgitos.");
+		System.out.println("El n√∫mero " + numeroIntroducido + " tiene " + numeroDeDigitos + " d√≠gitos.");
 	}
 
 }

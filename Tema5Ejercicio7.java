@@ -1,52 +1,48 @@
 /**
  * 
  */
-package paquetetema5;
+package tema5Ejercicios;
 
 import java.util.Scanner;
 
 /**
- * @author Manuel Millón
+ * @author Propietario
  *
  */
 public class Tema5Ejercicio7 {
 
 	/**
-	 * Ejercicio7. Realiza el control de acceso a una caja fuerte. La combinación
-	 * será un número de 4 cifras. El programa nos pedirá la combinación para
-	 * abrirla. Si no acertamos, se nos mostrará el mensaje “Lo siento, esa no es la
-	 * combinación” y si acertamos se nos dirá “La caja fuerte se ha abierto
-	 * satisfactoriamente”. Tendremos cuatro oportunidades para abrir la caja
-	 * fuerte.
+	 * Realiza el control de acceso a una caja fuerte. La combinaciÃ³n serÃ¡ un
+	 * nÃºmero de 4 cifras. El programa nos pedirÃ¡ la combinaciÃ³n para abrirla. Si no
+	 * acertamos, se nos mostrarÃ¡ el mensaje â€œLo siento, esa no es la combinaciÃ³nâ€
+	 * y si acertamos se nos dirÃ¡ â€œLa caja fuerte se ha abierto satisfactoriamenteâ€.
+	 * Tendremos cuatro oportunidades para abrir la caja fuerte.
 	 */
+	
 	public static void main(String[] args) {
-		Scanner n = new Scanner(System.in);
-
-		int intentos = 4;
-		int claveIntroducida;
-		boolean acierto = false;
+		Scanner kboard = new Scanner(System.in);
+		int numeroIntroducido;
+		int oportunidades = 3;
+		boolean password = false;
 
 		do {
-			System.out.print("Por favor, introduzca la clave de 4 dígitos de la caja fuerte: ");
-			claveIntroducida = n.nextInt(); 
-
-			if (claveIntroducida == 0666) {  //OJO. Si el número empezase por cero, el int o el double se comerían el primero cero y siempre daría error.
-				acierto = true;
-			} else {
-				System.out.println("Error. Vuelva a intentarlo ");
+			System.out.print("Mete el nÃºmero secreto de la caja fuerte: ");
+			numeroIntroducido = kboard.nextInt();
+			if (numeroIntroducido == 1234) {
+				password = true;
+			} else  {
+				System.out.println("Error. Te quedan " + oportunidades + " oportunidades."); 
 			}
-
-			intentos--;
-
-		} while ((intentos > 0) && (!acierto));
-
-		if (acierto) {
+			oportunidades --;
+		} while  ((oportunidades > 0) && (!password));
+		
+		if (password) {
 			System.out.println("Caja fuerte abierta");
 		} else {
-			System.out.println("Caja fuerte bloqueada permanentemente");
-
+			System.out.println("Game Over.");
 		}
-
+		
+	
 	}
 
 }
