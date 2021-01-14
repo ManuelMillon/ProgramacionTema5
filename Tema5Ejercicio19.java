@@ -31,12 +31,10 @@ public class Tema5Ejercicio19 {
 
 		while (base <= alturaDeseada) {
 
-			for (int i = 1; i <= espacios; i++)
-				;
-			{
+			for (int i = 1; i <= espacios; i++) {
 				System.out.print("");
 			}
-			for (int i = 1; i <= longitudDeLinea; i++) {
+			for (int j = 1; j <= longitudDeLinea; j++) {
 				System.out.print(relleno);
 			}
 
