@@ -28,24 +28,27 @@ public class Tema5Ejercicio19 {
 		int base = 1;
 		int longitudDeLinea = 1;
 		int espacios = alturaDeseada - 1;
-
+		int primeraAltura = 2;
+		
 		while (base <= alturaDeseada) {
 
-			for (int i = 1; i <= espacios; i++) {
-				System.out.print("");
-			}
-			for (int j = 1; j <= longitudDeLinea; j++) {
-				System.out.print(relleno);
-			}
 
-		System.out.println(" ");
-
-		base++;
-		espacios--;
-		longitudDeLinea += 2;
-
+				for (int i = 1; i <= espacios; i++) {
+					System.out.print(" ");
+				}
+				for (int j = 1; j <= longitudDeLinea; j++) {
+					System.out.print(relleno);
+				}
+				base++;
+				espacios--;
+				longitudDeLinea += 2;
+	
+				System.out.println(" ");
 		}
 
+		
+
+		
 	}
 
 }

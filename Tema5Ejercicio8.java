@@ -1,32 +1,26 @@
 /**
  * 
  */
-package tema5Ejercicios;
+package paquetetema5;
 import java.util.Scanner;
 /**
- * @author Manuel MillÃ³n
+ * @author Manuel Millón
  *
  */
 public class Tema5Ejercicio8 {
 
 	/**
-	 * Ejercicio 8
-	 * Muestra la tabla de multiplicar de un nÃºmero introducido por teclado.
+	 * Ejercicio 8. Muestra la tabla de multiplicar de un número introducido
+	 * por teclado
 	 */
 	public static void main(String[] args) {
-		Scanner kboard = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Introduce un número para hacer su tabla de multiplicar");
+		int numero = teclado.nextInt();
 		
-		System.out.print("Introduce el nÃºmero que quieras para sacar su tabla: ");
-		int numero = kboard.nextInt();
-		
-		for (int i = 0; i <  11; i ++) {
+		for (int i = 0; i <=10 ; i++) {
 			System.out.println(numero + " x " + i + " = " + (numero * i));
-			}
-		
-
-
-		
-
 	}
 
+}
 }

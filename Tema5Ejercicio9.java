@@ -1,36 +1,33 @@
 /**
  * 
  */
-package tema5Ejercicios;
+package paquetetema5;
+
 import java.util.Scanner;
+
 /**
- * @author Propietario
+ * Manuel Millón
  *
  */
 public class Tema5Ejercicio9 {
 
 	/**
-	 * Realiza un programa que nos diga cuÃ¡ntos dÃ­gitos tiene un nÃºmero introducido
-	 * por teclado. Este ejercicio es equivalente a otro realizado anteriormente, con
-	 * la salvedad de que el anterior estaba limitado a nÃºmeros de 5 dÃ­gitos como
-	 * mÃ¡ximo. En esta ocasiÃ³n, hay que realizar el ejercicio utilizando bucles; de
-	 * esta manera, la Ãºnica limitaciÃ³n en el nÃºmero de dÃ­gitos la establece el tipo de
-	 * dato que se utilice (int o long).
+	 * Programa que diga cuántos dígitos tiene un número introducido por teclado.
 	 */
 	public static void main(String[] args) {
-		Scanner kboard = new Scanner(System.in);
-		System.out.print("Introduce un nÃºmero para saber su cantidad de dÃ­gitos: ");
-		int i = kboard.nextInt();
-		int numeroDeDigitos=1;
-		int numeroIntroducido;
-		numeroIntroducido = i;
 
-		while (i > 0) {
-			System.out.println(i);
-			i /= 10;
-		numeroDeDigitos++;
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduce el número para calcular sus dígitos: ");
+		int numero = teclado.nextInt();
+		int numeroDeDigitos = 1;
+
+		
+		while (numero => 10) { // Mientras se cumple la condición
+			numero /= 10;     // de la operación, numeroDeDigitos crece 1 desde 1.
+			numeroDeDigitos++;
 		}
-		System.out.println("El nÃºmero " + numeroIntroducido + " tiene " + numeroDeDigitos + " dÃ­gitos.");
+		int numero0 = numero;
+		System.out.println(numero0 + " tiene " + numeroDeDigitos + " dígitos.");
 	}
 
 }
