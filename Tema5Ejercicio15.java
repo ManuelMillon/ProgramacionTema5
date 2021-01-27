@@ -1,38 +1,27 @@
 /**
  * 
  */
-package tema5Ejercicios;
+package paquetetema5;
 
 import java.util.Scanner;
 
 /**
- * @author Manuel Millón
+ * @author Usuario
  *
  */
 public class Tema5Ejercicio15 {
 
 	/**
-	 * Escribe un programa que dados dos números, uno real (base) y un entero
-	 * positivo (exponente), saque por pantalla todas las potencias con base el
-	 * numero dado y exponentes entre uno y el exponente introducido. No se deben
-	 * utilizar funciones de exponenciación. Por ejemplo, si introducimos el 2 y el
-	 * 5, se deberán mostrar 21, 22, 23, 24 y 25.
+	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner kboard = new Scanner(System.in);
-
-		System.out.print("Introduzca un número real como base: ");
-		double base = kboard.nextDouble();
-		System.out.print("Introduzca un múmero entero como exponente: ");
-		int exponenteFinal = kboard.nextInt();
-
-		for (int i = 1; i <= exponenteFinal; i++) {
-			int potencia = 1;
-			int exponente = i;
-			for (int j = 0; j < exponente; j++) {
-				potencia *= base;
-			}
-			System.out.println(base + "^" + i + " = " + potencia);
+		Scanner s = new Scanner(System.in);
+		System.out.println("Introduce un número para ver sus potencias: ");
+		int n = s.nextInt();
+		int m = 0;
+		for (int i = 0; i < 6; i++) {
+			m = (int) Math.pow(n, i);
+			System.out.print(m + " | ");
 		}
 
 	}
