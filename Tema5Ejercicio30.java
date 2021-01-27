@@ -5,6 +5,8 @@ package paquetetema5;
 
 import java.util.Scanner;
 
+import jdk.internal.misc.FileSystemOption;
+
 /**
  * @author Usuario
  *
@@ -12,40 +14,86 @@ import java.util.Scanner;
 public class Tema5Ejercicio30 {
 
 	/**
-	 * Ejercicio 30
-	 * Realiza una programa que calcule las horas transcurridas entre dos horas de
-	 * dos dÌas de la semana. No se tendr·n en cuenta los minutos ni los segundos.
-	 * El dÌa de la semana se puede pedir como un n˙mero (del 1 al 7) o como una
-	 * cadena (de ìlunesî a ìdomingoî). Se debe comprobar que el usuario introduce
-	 * los datos correctamente y que el segundo dÌa es posterior al primero.
+	 * Ejercicio 30 Realiza una programa que calcule las horas transcurridas entre
+	 * dos horas de dos d√≠as de la semana. No se tendr√°n en cuenta los minutos ni
+	 * los segundos. El d√≠a de la semana se puede pedir como un n√∫mero (del 1 al 7)
+	 * o como una cadena (de lunes a domingo). Se debe comprobar que el usuario
+	 * introduce los datos correctamente y que el segundo d√≠a es posterior al
+	 * primero.
 	 */
 	public static void main(String[] args) {
 		Scanner kboard = new Scanner(System.in);
-		
-		
-		for                                                                                                   
-		System.out.print("Introduce el primer n˙mero del dÌa de la semana: ");
-		int primerDia = kboard.nextInt();
-		System.out.print("Introduce la hora del primer dÌa: ");
-		int horaPrimera = kboard.nextInt();
-		System.out.print("Introduce el segundo n˙mero del dÌa de la semana: ");
-		int segundoDia = kboard.nextInt();
-		System.out.println("Introduce la hora del segundo dÌa");
-		int segundaHora = kboard.nextInt();
-		
-
-		switch (primerDia) {
-		case 1:
-			precio = precio - (precio / 10);
-			System.out.println("Eres socio");
-			break;
-		case "no":
-			precio = precio;
-			System.out.println("No eres socio");
-			break;
-		default:
-		}
-
+		boolean datoCorrecto = true;
+		int primerDia = 0;
+		int horaPrimera = 0;
+		int segundoDia = 0;
+		int horaSegunda = 0;
+		int horasPrimerDia = 0;
+		int horasSegundoDia = 0;
+		do {
+			System.out.print("Introduce el primer n√∫mero del d√≠a de la semana: ");
+			primerDia = kboard.nextInt();
+			System.out.print("Introduce la hora del primer d√≠a: ");
+			horaPrimera = kboard.nextInt();
+			System.out.print("Introduce el segundo n√∫mero del d√≠a de la semana: ");
+			segundoDia = kboard.nextInt();
+			System.out.println("Introduce la hora del segundo d√≠a");
+			horaSegunda = kboard.nextInt();
+			switch (primerDia) {
+			case 1:
+				horasPrimerDia = 0;
+				break;
+			case 2:
+				horasPrimerDia = 24;
+				break;
+			case 3:
+				horasPrimerDia = 48;
+				break;
+			case 4:
+				horasPrimerDia = 72;
+				break;
+			case 5:
+				horasPrimerDia = 96;
+				break;
+			case 6:
+				horasPrimerDia = 120;
+				break;
+			case 7:
+				horasPrimerDia = 144;
+				break;
+			default:
+			}
+			switch (segundoDia) {
+			case 1:
+				horasSegundoDia = 0;
+				break;
+			case 2:
+				horasSegundoDia = 24;
+				break;
+			case 3:
+				horasSegundoDia = 48;
+				break;
+			case 4:
+				horasSegundoDia = 72;
+				break;
+			case 5:
+				horasSegundoDia = 96;
+				break;
+			case 6:
+				horasSegundoDia = 120;
+				break;
+			case 7:
+				horasSegundoDia = 144;
+				break;
+			default:
+			}
+			datoCorrecto = true;
+			if ((primerDia > 8) || (segundoDia > 8) || (horaPrimera > 23) || (horaSegunda > 23)) {
+				System.out.println("La hora introducida es incorrecta. Int√©ntelo de nuevo: ");
+				datoCorrecto = false;
+			}
+		} while (!datoCorrecto);
+		int horasTotales = (horasSegundoDia + horaSegunda) - (horasPrimerDia + horaPrimera);
+		System.out.println("En total restan " + horasTotales + " horas entre en primer d√≠a y el segundo.");
 	}
-
 }
